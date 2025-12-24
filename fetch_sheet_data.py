@@ -1,5 +1,25 @@
+import smtplib
+import requests
+from email.message import EmailMessage
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from googleads import ad_manager
+import gspread
+import tempfile
+import os
+import gzip
+import pandas as pd
+import shutil
+import datetime
+import pytz
+import csv
+import json
 from googleapiclient.discovery import build
 from google.oauth2.service_account import Credentials
+from googleads import errors
+import logging
+logging.basicConfig(level=logging.DEBUG)
+from oauth2client.service_account import ServiceAccountCredentials
 
 # Google Sheets setup
 SPREADSHEET_ID = '1IlvkuwMIYTYUPiU-UNxnHZwVmqYUqMr2ATOBZEwx9Bk'
@@ -7,8 +27,9 @@ RANGE_NAME = 'Sheet1!A:C'  # Adjust range if needed (e.g., A1:C100)
 
 def fetch_sheet_data(spreadsheet_id, range_name):
 
-    creds = Credentials.from_service_account_file('credentials.json', scopes=["https://www.googleapis.com/auth/spreadsheets.readonly"])
-
+    creds_json = json.loads(GOOGLE_CREDENTIALS_JSON)
+    scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_json, scope)
     service = build('sheets', 'v4', credentials=creds)
     sheet = service.spreadsheets()
 

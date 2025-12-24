@@ -4,6 +4,28 @@ from old_gam_report import calculate_average_of_column_d
 from old_gam_report import total_impressions
 from datetime import datetime
 import csv
+import smtplib
+import requests
+from email.message import EmailMessage
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from googleads import ad_manager
+import gspread
+import tempfile
+import os
+import gzip
+import pandas as pd
+import shutil
+import datetime
+import pytz
+import csv
+import json
+from googleapiclient.discovery import build
+from google.oauth2.service_account import Credentials
+from googleads import errors
+import logging
+logging.basicConfig(level=logging.DEBUG)
+from oauth2client.service_account import ServiceAccountCredentials
 
 def get_order_name(client,order_id ):
     """Fetch the name of the order for a given order_id."""
