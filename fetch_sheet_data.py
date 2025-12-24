@@ -24,6 +24,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 # Google Sheets setup
 SPREADSHEET_ID = '1IlvkuwMIYTYUPiU-UNxnHZwVmqYUqMr2ATOBZEwx9Bk'
 RANGE_NAME = 'Sheet1!A:C'  # Adjust range if needed (e.g., A1:C100)
+GOOGLE_CREDENTIALS_JSON = os.getenv('GOOGLE_CREDENTIALS_JSON')
 
 def fetch_sheet_data(spreadsheet_id, range_name):
 
