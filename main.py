@@ -4,6 +4,18 @@ from process_both_gam import processing_both_gam
 from process_both_gam import processing_single_gam
 from send_email import send_email
 from send_email import send_email_single_gam
+import gspread
+import tempfile
+import os
+import gzip
+import pandas as pd
+import shutil
+import datetime
+import pytz
+import csv
+import json
+from googleapiclient.discovery import build
+from google.oauth2.service_account import Credentials
 
 GOOGLE_CREDENTIALS_JSON = os.getenv('GOOGLE_CREDENTIALS_JSON')
 EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
