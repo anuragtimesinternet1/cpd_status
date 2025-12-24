@@ -17,10 +17,8 @@ jobs:
       CLIENT_ID: ${{ vars.CLIENT_ID }}
       CLIENT_SECRET: ${{ vars.CLIENT_SECRET }}
       REFRESH_TOKEN: ${{ vars.REFRESH_TOKEN }}
-
-      # Secrets
-      GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
-      EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+      GOOGLE_CREDENTIALS_JSON: ${{ vars.GOOGLE_CREDENTIALS_JSON }}
+      EMAIL_PASSWORD: ${{ vars.EMAIL_PASSWORD }}
 
     steps:
       - name: Checkout repository
