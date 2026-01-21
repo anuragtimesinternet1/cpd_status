@@ -147,10 +147,10 @@ def send_email(result, commitment_value):
     """
 
     sender_email = "anurag.mishra1@timesinternet.in"
-    recipient_emails = ["anurag.mishra1@timesinternet.in","colombia.opsqc@timesinternet.in","teamaddelivery@timesinternet.in","customersuccess@timesinternet.in","sagar@timesinternet.in","mdanish.muinuddin@timesinternet.in"]
+    recipient_emails = ["anurag.mishra1@timesinternet.in","teamaddelivery@timesinternet.in","customersuccess@timesinternet.in","mdanish.muinuddin@timesinternet.in"]
 
     msg = MIMEMultipart('alternative')
-    msg['From'] = f'AdTech Quality <{sender_email}>'
+    msg['From'] = f'CPD CAMPAIGN STATUS <{sender_email}>'
     msg['To'] = ", ".join(recipient_emails)
     msg['Subject'] = subject
 
@@ -285,10 +285,10 @@ def send_email_single_gam(result):
     # Email credentials
     EMAIL_PASSWORD = "mswo jphq fmcl djlo"  # Replace with your app-specific password
     sender_email = "anurag.mishra1@timesinternet.in"
-    recipient_emails = ["anurag.mishra1@timesinternet.in","colombia.opsqc@timesinternet.in","teamaddelivery@timesinternet.in","customersuccess@timesinternet.in","sagar@timesinternet.in","mdanish.muinuddin@timesinternet.in"]
+    recipient_emails = ["anurag.mishra1@timesinternet.in","teamaddelivery@timesinternet.in","customersuccess@timesinternet.in","mdanish.muinuddin@timesinternet.in"]
 
     msg = MIMEMultipart('alternative')
-    msg['From'] = f'AdTech Quality <{sender_email}>'
+    msg['From'] = f'CPD CAMPAIGN STATUS <{sender_email}>'
     msg['To'] = ", ".join(recipient_emails)
     msg['Subject'] = subject
 
