@@ -53,7 +53,7 @@ def parse_commitment(commitment_str):
         if 'Mn' in commitment_str:
             return float(commitment_str.replace('Mn', '').strip()) * 1_000_000
         else:
-            return float(commitment_str.strip())  # Default case for numeric values
+            return float(commitment_str.strip())  
     except ValueError:
         return 0  # Return 0 for invalid or missing commitments
 
