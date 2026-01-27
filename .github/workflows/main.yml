@@ -1,0 +1,38 @@
+name: CPD Status
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # every hour (UTC)
+  workflow_dispatch:
+
+jobs:
+  run-main:
+    runs-on: ubuntu-latest
+
+    env:
+      # Repo Variables
+      APPLICATION_NAME: ${{ vars.APPLICATION_NAME }}
+      NETWORK_CODE1: ${{ vars.NETWORK_CODE1 }}
+      NETWORK_CODE2: ${{ vars.NETWORK_CODE2 }}
+      CLIENT_ID: ${{ vars.CLIENT_ID }}
+      CLIENT_SECRET: ${{ vars.CLIENT_SECRET }}
+      REFRESH_TOKEN: ${{ vars.REFRESH_TOKEN }}
+      GOOGLE_CREDENTIALS_JSON: ${{ vars.GOOGLE_CREDENTIALS_JSON }}
+      EMAIL_PASSWORD: ${{ vars.EMAIL_PASSWORD }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run main.py
+        run: python main.py
