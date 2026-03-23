@@ -283,7 +283,7 @@ def send_email_single_gam(result):
     """
 
     # Email credentials
-    EMAIL_PASSWORD = "mswo jphq fmcl djlo"  # Replace with your app-specific password
+    EMAIL_PASSWORD = "rxlu atqh anvh zmwp"  # Replace with your app-specific password
     sender_email = "anurag.mishra1@timesinternet.in"
     recipient_emails = ["anurag.mishra1@timesinternet.in","teamaddelivery@timesinternet.in","customersuccess@timesinternet.in","mdanish.muinuddin@timesinternet.in"]
 
