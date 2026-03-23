@@ -156,7 +156,7 @@ def send_email(result, commitment_value):
 
     # Attach the HTML body
     msg.attach(MIMEText(html, 'html'))
-    EMAIL_PASSWORD='mswo jphq fmcl djlo'
+    EMAIL_PASSWORD='rxlu atqh anvh zmwp'
     try:
         # Set up the server (using Gmail SMTP)
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
