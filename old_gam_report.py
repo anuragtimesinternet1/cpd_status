@@ -28,7 +28,7 @@ def hourly_impressions_report_for_order_old_gam(client,order_id):
     today = datetime.date.today()
     start_date = today
     end_date = today
-    report_downloader = client.GetDataDownloader(version='v202502')
+    report_downloader = client.GetDataDownloader(version='v202602')
     report_job = {
         'reportQuery': {
             'dimensions': ['ORDER_ID', 'ORDER_NAME', 'HOUR'],
