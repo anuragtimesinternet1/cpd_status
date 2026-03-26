@@ -30,7 +30,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 def get_order_name(client,order_id ):
     """Fetch the name of the order for a given order_id."""
     # Initialize the OrderService
-    order_service = client.GetService('OrderService')
+    order_service = client.GetService("OrderService", version="v202602")
 
     # Create a statement to filter the order by its ID
     statement = ad_manager.StatementBuilder().Where('id = :order_id').WithBindVariable('order_id', order_id)
