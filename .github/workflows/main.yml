@@ -2,7 +2,7 @@ name: CPD Status
 
 on:
   schedule:
-    - cron: "0 * * * *"   # every hour (UTC)
+    - cron: "30 5-18 * * *"#
   workflow_dispatch:
 
 jobs:
