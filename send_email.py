@@ -156,7 +156,7 @@ def send_email(result, commitment_value):
 
     # Attach the HTML body
     msg.attach(MIMEText(html, 'html'))
-    EMAIL_PASSWORD='rxlu atqh anvh zmwp'
+    EMAIL_PASSWORD='kvao bxvg yhgl ymtz'
     try:
         # Set up the server (using Gmail SMTP)
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
@@ -283,7 +283,7 @@ def send_email_single_gam(result):
     """
 
     # Email credentials
-    EMAIL_PASSWORD = "rxlu atqh anvh zmwp"  # Replace with your app-specific password
+    EMAIL_PASSWORD = "kvao bxvg yhgl ymtz"  # Replace with your app-specific password
     sender_email = "anurag.mishra1@timesinternet.in"
     recipient_emails = ["anurag.mishra1@timesinternet.in","teamaddelivery@timesinternet.in","customersuccess@timesinternet.in","mdanish.muinuddin@timesinternet.in"]
 
