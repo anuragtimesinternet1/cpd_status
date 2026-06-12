@@ -2,15 +2,14 @@ name: CPD Status
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 * * * *"      # Every hour
   workflow_dispatch:
 
 jobs:
   run-main:
     runs-on: ubuntu-latest
-
+    
     env:
-      # Repo Variables
       APPLICATION_NAME: ${{ vars.APPLICATION_NAME }}
       NETWORK_CODE1: ${{ vars.NETWORK_CODE1 }}
       NETWORK_CODE2: ${{ vars.NETWORK_CODE2 }}
@@ -36,3 +35,8 @@ jobs:
 
       - name: Run main.py
         run: python main.py
+
+      - name: Show logs (for debugging)
+        if: always()
+        run: |
+          echo "✅ Workflow completed at $(date)"
